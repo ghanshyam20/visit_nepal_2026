@@ -1,0 +1,170 @@
+/* Visit Nepal 2026 , i have make one page css so that it will include for all pages */
+
+/*  i am gonna use this colors reused in all over  the site so i include here  */
+:root{
+  --bg:#f8fafc;
+  --ink:#1f2937;
+  --muted:#6b7280;
+  --brand:#b91c1c;
+  --brand-alt:#0f766e;
+  --card:#ffffff;
+}
+
+/*  it Makes everything fitted  nicely inside the page box */
+*{ box-sizing:border-box }
+
+/*  this will make scroll feels god when clicking anchor links */
+html{ scroll-behavior:smooth }
+
+/* Body */
+body{
+  margin:0;
+  font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial;
+  color:var(--ink);
+  background:var(--bg);
+  line-height:1.6;
+}
+
+/*  it will Keeps content centered and not too wideer */
+.container{ max-width:1100px; margin:auto; padding:0 1rem }
+
+/*  this is for Header section  / Navigation sectionons */
+header{
+  background:#ffffff;
+  border-bottom:1px solid #e5e7eb;
+  position:sticky; top:0; z-index:50;
+}
+.site-top{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:.8rem 0;
+}
+.brand{
+  display:flex; gap:.75rem; align-items:center;
+  font-weight:800; font-size:1.15rem; color:var(--ink); text-decoration:none;
+}
+.brand img{ height:34px; width:auto }
+nav ul{ display:flex; gap:1rem; list-style:none; margin:0; padding:0; flex-wrap:wrap }
+nav a{
+  text-decoration:none; color:var(--ink); padding:.4rem .6rem; border-radius:.5rem;
+}
+nav a[aria-current="page"], nav a:hover{
+  background:var(--brand); color:#fff;
+}
+
+/* Hero */
+.hero{
+  background:linear-gradient(180deg, rgba(185,28,28,.10), rgba(15,118,110,.08));
+  padding:2.2rem 0 2rem;
+  border-bottom:1px solid #e5e7eb;
+}
+.hero h1{ font-size:2rem; margin:.2rem 0 0 }
+.hero p{ color:var(--muted); margin:.4rem 0 0 }
+
+/* Grid helpers */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:1rem;
+}
+@media (max-width:900px){ .grid{ grid-template-columns:repeat(2, 1fr) } }
+@media (max-width:640px){ .grid{ grid-template-columns:1fr } }
+
+/* this is for  Cards */
+.card{
+  background:var(--card);
+  border:1px solid #e5e7eb; border-radius:14px; overflow:hidden;
+  box-shadow:0 1px 2px rgba(0,0,0,.03);
+}
+.card img{
+  width:100%; height:220px; object-fit:cover; display:block;
+}
+.card .pad{ padding:1rem }
+.card h3{ margin:.1rem 0 .4rem }
+.card p{ margin:.3rem 0 .6rem; color:var(--muted) }
+
+/*  this css  for Buttons */
+.btn{
+  display:inline-block; background:var(--brand); color:#fff;
+  text-decoration:none; padding:.55rem .9rem; border-radius:.6rem;
+}
+.btn.alt{ background:var(--brand-alt) }
+
+/* Main */
+main{ padding:1.6rem 0 }
+main h2{ margin:0 0 .6rem }
+.lead{ color:var(--muted) }
+
+/* Figure */
+.figure{
+  background:#fff; border:1px solid #e5e7eb; border-radius:14px; overflow:hidden;
+}
+.figure img{ display:block; width:100%; height:auto }
+.figure figcaption{ padding:.7rem 1rem; color:var(--muted) }
+
+/* List box */
+.list{
+  background:#fff; border:1px solid #e5e7eb; border-radius:14px; padding:1rem;
+}
+.list li{ margin:.3rem 0 }
+
+/* Gallery */
+.gallery{
+  display:grid; gap:.7rem;
+  grid-template-columns:repeat(3, 1fr);
+}
+.gallery img{
+  width:100%; height:200px; object-fit:cover; border-radius:12px;
+  border:1px solid #e5e7eb; background:#fff;
+}
+@media (max-width:900px){ .gallery{ grid-template-columns:repeat(2, 1fr) } }
+@media (max-width:640px){ .gallery{ grid-template-columns:1fr } }
+
+/* Small text & kbd */
+.small{ font-size:.9rem; color:var(--muted) }
+kbd{
+  background:#f1f5f9; border:1px solid #e5e7eb; border-bottom-width:2px;
+  border-radius:6px; padding:0 .35rem;
+}
+
+/* Footer with Social Icons (merged) */
+footer{
+  background:#ffffff;
+  border-top:1px solid #e5e7eb;
+  padding:1.2rem 0;
+  margin-top:2rem;
+  color:var(--muted);
+}
+.footer-container{
+  max-width:1100px; margin:auto; padding:0 1rem;
+  display:flex; flex-direction:column; align-items:center; text-align:center;
+}
+.footer-container p{
+  font-size:.9rem; color:#6b7280; margin-bottom:.7rem;
+}
+.social-links{
+  display:flex; gap:.8rem; justify-content:center;
+}
+.social-links a img{
+  width:22px; height:22px;
+  filter:grayscale(100%) brightness(0.4);
+  transition:filter .3s ease, transform .2s ease;
+}
+.social-links a:hover img{
+  filter:none; transform:scale(1.15);
+}
+
+ /*  mobile, laptop, pc's  responsiveness  */
+@media (max-width:640px){
+  .footer-container p{ font-size:.8rem }
+  .social-links a img{ width:20px; height:20px }
+}
+
+/* 
+I use one clean CSS file to style the whole website.
+It sets simple colours, fonts, and spacing to keep pages clean  and easy to read. 
+The header stays on top while scrolling, and the menu links change color when active.
+the grid layout keeps cards and images in place on any screen. 
+Buttons use red and teal colors from the Nepali flag. 
+The footer has small text with social icons that turn colorful on hover. 
+any of you reading this ,  have fun haha , and juha i like your teaching style if you read this comment , lets see if you read this or not.
+*/
